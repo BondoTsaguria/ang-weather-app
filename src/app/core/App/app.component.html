@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="upper-data">
+    <img
+      src="../../../assets/images/hot.jpg"
+      alt="hot temperature image"
+      *ngIf="14 > 15"
+    />
+    <img
+      src="../../../assets/images/cold.jpg"
+      alt="cold temperature image"
+      *ngIf="15 > 14"
+    />
+
+    <div class="weather-data">
+      <div class="location">Wellington</div>
+      <div class="temperature">{{ 14.4 | number : "1.0-0" }}°C</div>
+    </div>
+  </div>
+  <div class="lower-data">
+    <div class="more-info-label">More Information</div>
+    <div class="more-info-container">
+      <!-- 1-->
+      <div class="info-block">
+        <div class="info-block-label">
+          <i class="fa-solid fa-temperature-arrow-down fa-4x min-temp-icon"></i>
+          <span>min</span>
+        </div>
+        <div class="info-block-value">10°C</div>
+      </div>
+      <!-- 2-->
+      <div class="info-block">
+        <div class="info-block-label">
+          <i class="fa-solid fa-temperature-arrow-up fa-4x min-temp-icon"></i>
+          <span>max</span>
+        </div>
+        <div class="info-block-value">20°C</div>
+      </div>
+      <!-- 3-->
+      <div class="info-block">
+        <div class="info-block-label">
+          <img src="../../../assets/images/humidity.jpg" alt="humidity image" />
+          <span>Humidity</span>
+        </div>
+        <div class="info-block-value">77 %</div>
+      </div>
+      <!-- 4-->
+      <div class="info-block">
+        <div class="info-block-label">
+          <img src="../../../assets/images/wind.jpg" alt="wind image" />
+          <span>wind</span>
+        </div>
+        <div class="info-block-value">11 km/h</div>
+      </div>
+    </div>
+  </div>
+</div>
