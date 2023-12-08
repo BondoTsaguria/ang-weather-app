@@ -19,7 +19,7 @@ export class WeatherService {
 
   getWeatherData(cityName: string): Observable<WeatherData> {
     // Append the city name as a parameter
-    const params = new HttpParams().set('q', cityName);
+    const params = new HttpParams().set('q', cityName).set('units', 'metric');
 
     // Use the options with headers and append the params
     const requestOptions = { ...this.options, params };
